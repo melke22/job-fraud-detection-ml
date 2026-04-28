@@ -1,0 +1,145 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">YOUR PROFILE DETAILS !!! </p>
+                            <hr>
+ 							<div class="form-group">
+                                <P><span class="style1">USER NAME</span> = {{object.username}}</P>
+                            </div>
+
+							<div class="form-group">
+                                <P><span class="style1">EMAIL</span> = {{object.email}}</P>
+                            </div>
+
+							<div class="form-group">
+                                <P><span class="style1">PASSWORD</span> = {{object.password}}</P>
+							</div>
+
+							<div class="form-group">
+                                <p><span class="style1">MOBILE NO</span> = {{object.phoneno}}</p>
+
+							</div>
+
+							
+ <!-- white
+				font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			font-size: 24px;
+			}
+		.style1 {
+			color: #FF0000;
+			font-weight: bold;
+		}
+		.style2 {
+		font-family: 'Righteous', cursive;
+		color: #FF0000;
+		font-weight: bold;
+	}yeyellow
+		font-family: Impact, font-size: 20px;'Arial Narrow Bold', sans-serif;
+	}
+		.style1 text-center { yeyellow
+				.col-md-5 {
+						/* background-color: #8f8c8c; */
+						padding: 50px;
+						border-radius: 50px;
+					}
+				.btn-md {
+						font-size: 16px;
+					}
+				.btn-md {
+						font-size: 16px;
+					}
+				.btn-md {
+						background-c
+		.btn-md {
+			font-size: 16px;
+		} 241);
+						border-radius: 10px;
+						cursor: pointer;
+					}
+		
+		
+		
+				.btn-md:hover{
+						background-color: #e304f7;
+						transition: 0.5s;
+					}
+				.btn-lg {
+						font-size: 12px;
+						/* background-color: #728d73; */
+						/* color: white; */
+						font-weight: 600;
+						font-family: Verdana, Geneva, Tahoma, sans-serif;
+						border-radius: 10px;
+					}
+				.btn-lg a{
+						color: blue;
+						text-decoration: none;
+					}
+		.btn-lg a:hover{
+			color: red;
+			text-decoration: none;
+		}
+</style> -->
+
+							<div class="form-group">
+                                <p><span class="style1">COUNTRY</span> = {{object.country}}</p>
+
+							</div>
+
+							<div class="form-group">
+                                <p><span class="style1">STATE</span> = {{object.state}}</p>
+
+							</div>
+
+							<div class="form-group">
+                                <p><span class="style1">CITY</span> = {{object.city}}</p>
+
+							</div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

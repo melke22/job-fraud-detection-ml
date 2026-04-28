@@ -1,0 +1,169 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Login</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<head>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+		<style>
+			body {background: url("{% static 's.jpg' %}");
+			}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			
+		.style1 {
+			color:white;
+			font-weight: bold;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		}
+		.style1 text-center {
+			color: white;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			
+		}
+        .style4 {
+			color: #fffb00; 
+			font-weight: bold;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			font-size: 24px;
+		}
+        .style5 {
+			font-family: 'Righteous', cursive;
+			color: #fffb00;
+			font-weight: bold;
+			font-size: 24px;
+		}
+		.col-md-5 {
+			/* background-color: #8f8c8c; */
+			padding: 50px;
+			border-radius: 50px;
+		}
+		.btn-md {
+			font-size: 16px;
+			background-color: #04d6f7;
+			color: rgb(24, 9, 241);
+			border-radius: 10px;
+			cursor: pointer;
+			
+		}
+
+		.btn-md:hover{
+			background-color: #e304f7;
+			transition: 0.5s;
+		}
+
+		.btn-lg {
+			font-size: 12px;
+			/* background-color: #728d73; */
+			/* color: white; */
+			font-weight: 600;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			border-radius: 10px;
+		}
+		.btn-lg a{
+			color: blue;
+			text-decoration: none;
+		}
+		.btn-lg a:hover{
+			color: rgb(51, 255, 0);
+			transition: 0.5s;
+		}
+		.footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: #333;
+			color: white;
+			text-align: center;
+		}
+		.footer p{
+			margin: 0;
+			padding: 10px;
+			font-size: 12px;
+			color: #dae1e6;
+		}
+		
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div >
+			<h2 class="style1 text-center" id="title"><strong>A Comparative Study on Fake Job Post Prediction Using Different Machine Learning Techniques </strong></h2>
+			 <p class="text-center">
+				<span class="style4"><small id="passwordHelpInline">Fake Job Prediction:- Machine Learning, Deep learning, Data mining Techniques
+
+ </small></span> </p>
+ 			<hr>
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center">&nbsp;</p>
+					  </fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-5">
+ 				 		<form method="POST" role="form">
+							{% csrf_token %}
+
+						<fieldset>
+                             {% load static %}
+						<img src="{% static '/login.jpg' %}" alt="My image">
+							<p class="style5"> Login Using Your Account: </p>
+
+							<div class="form-group">
+								<input type="text" name="username"   placeholder="User Name" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password"   placeholder="Password" required>
+							</div>
+							<div>
+								<input type="submit" name="submit1"  class="btn btn-md" value="Sign In">
+							</div></br>
+
+							<p class="style5"> Login Using Your Account: </p>
+
+							<div>
+
+							<button class="btn btn-lg "><a href="{% url 'serviceproviderlogin' %}">SERVICE PROVIDER</a></button>
+                                <button class="btn btn-lg "><a href="{% url 'Register1' %}">REGISTER</a></button>
+ 							</div>
+ 						</fieldset>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <div class="footer">
+		  <p>Copyright @ 2024. Made <i class="fa-solid fa-heart"></i> by Melkamu & Ridwan under Guidance of Mr. Ravi Kumar</p>
+    </div>
+	</body>
+
+
+</html>
